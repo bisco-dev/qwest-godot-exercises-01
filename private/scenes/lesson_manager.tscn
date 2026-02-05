@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://o82518e0gqly"]
+
+[ext_resource type="Script" uid="uid://dl85vrflabi1u" path="res://private/scripts/lesson_manager.gd" id="1_ribq8"]
+[ext_resource type="PackedScene" uid="uid://61wyknm8ild1" path="res://private/ui/end_ui.tscn" id="2_cqsrq"]
+
+[node name="LessonManager" type="Node" node_paths=PackedStringArray("end_ui")]
+script = ExtResource("1_ribq8")
+end_ui = NodePath("CanvasLayer/EndUI")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EndUI" parent="CanvasLayer" instance=ExtResource("2_cqsrq")]
+visible = false
+
+[node name="ExitButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(120, 40)
+offset_left = 29.0
+offset_top = 26.0
+offset_right = 149.0
+offset_bottom = 66.0
+text = "EXIT"
+
+[node name="ResetButton" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(120, 40)
+offset_left = 29.0
+offset_top = 79.0
+offset_right = 149.0
+offset_bottom = 119.0
+text = "RESET"
+
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResetButton" to="." method="_on_reset_button_pressed"]

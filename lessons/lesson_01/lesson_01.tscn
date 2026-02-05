@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo8cm4xq1ubp1"]
+
+[ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_6la3a"]
+[ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_iliwe"]
+
+[node name="Lesson01" type="Node2D"]
+script = ExtResource("1_6la3a")
+lesson_id = "lesson_01"
+
+[node name="Background" parent="." instance=ExtResource("2_iliwe")]
+
+[node name="Camera" type="Camera2D" parent="."]
+texture_filter = 1
+offset = Vector2(0, -9.07)
+zoom = Vector2(5, 5)
+process_callback = 0
+position_smoothing_enabled = true
