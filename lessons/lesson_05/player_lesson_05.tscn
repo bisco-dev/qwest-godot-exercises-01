@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq78i2v6hploj"]
+[gd_scene load_steps=4 format=3 uid="uid://bqbpt74ipns7v"]
 
-[ext_resource type="PackedScene" uid="uid://c42uvkhabynn0" path="res://shared/scenes/player.tscn" id="1_spfuh"]
-[ext_resource type="Script" uid="uid://byjl4lmpsyr5x" path="res://lessons/lesson_05/player_lesson_05.gd" id="2_v8c84"]
+[ext_resource type="PackedScene" uid="uid://c42uvkhabynn0" path="res://shared/scenes/player.tscn" id="1_jvkmu"]
+[ext_resource type="Script" uid="uid://csdspnjfnmqsa" path="res://lessons/lesson_05/player_lesson_05.gd" id="2_873nf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pj6ib"]
 radius = 7.0
 height = 16.0
 
-[node name="Player" instance=ExtResource("1_spfuh")]
-script = ExtResource("2_v8c84")
+[node name="Player" instance=ExtResource("1_jvkmu")]
+script = ExtResource("2_873nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 position = Vector2(0, -8)

@@ -1,3 +1,4 @@
+# Helper code to help you learn faster
 extends "res://private/scripts/base_player.gd"
 
 # This script controls the player character.

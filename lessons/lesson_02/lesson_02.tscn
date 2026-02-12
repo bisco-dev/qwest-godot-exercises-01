@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://cleflurgmiuh7"]
+[gd_scene load_steps=8 format=4 uid="uid://d27r7mf5t8wdx"]
 
-[ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_ptsi8"]
-[ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_6la3a"]
-[ext_resource type="Texture2D" uid="uid://b46uk8x41lnod" path="res://shared/art/environment/terrain/ts_terrain_tiles_01.png" id="2_ot3in"]
-[ext_resource type="PackedScene" uid="uid://cl2yw6owax5np" path="res://shared/scenes/flag.tscn" id="4_6la3a"]
-[ext_resource type="PackedScene" uid="uid://dsp45hoq1s8lq" path="res://lessons/lesson_02/player_lesson_02.tscn" id="5_6la3a"]
+[ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_d7ba7"]
+[ext_resource type="PackedScene" uid="uid://cl2yw6owax5np" path="res://shared/scenes/flag.tscn" id="1_fajuv"]
+[ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_3kn2p"]
+[ext_resource type="PackedScene" uid="uid://g7x7uguvhfw3" path="res://lessons/lesson_02/player_lesson_02.tscn" id="3_d7ba7"]
+[ext_resource type="Texture2D" uid="uid://b46uk8x41lnod" path="res://shared/art/environment/terrain/ts_terrain_tiles_01.png" id="3_xqhgk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gulr2"]
-texture = ExtResource("2_ot3in")
+texture = ExtResource("3_xqhgk")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.07518005, 8, -0.07518005, 8, 8, -8, 8)
 2:0/0 = 0
@@ -342,25 +342,27 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gulr2")
 
 [node name="Lesson02" type="Node2D"]
-script = ExtResource("1_ptsi8")
-lesson_id = "lesson_02"
+script = ExtResource("1_d7ba7")
+lesson_id = "lesson_03"
 
-[node name="Background" parent="." instance=ExtResource("2_6la3a")]
+[node name="Background" parent="." instance=ExtResource("2_3kn2p")]
+position = Vector2(10, 74)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAD7/wMAAAAFAAYAAAD7/wQAAAAFAAcAAAD7/wUAAAAFAAgAAAD7/wYAAAAFAAkAAAD8/wMAAAAGAAgAAAD8/wQAAAAGAAgAAAD8/wUAAAAGAAgAAAD8/wYAAAAGAAkAAAD9/wMAAAAGAAgAAAD9/wQAAAAGAAgAAAD9/wUAAAAGAAgAAAD9/wYAAAAHAAkAAAD+/wMAAAAGAAgAAAD+/wQAAAAGAAgAAAD+/wUAAAAGAAgAAAD+/wYAAAAGAAkAAAD//wMAAAAGAAgAAAD//wQAAAAGAAgAAAD//wUAAAAGAAgAAAD//wYAAAAHAAkAAAAAAAMAAAAGAAgAAAAAAAQAAAAGAAgAAAAAAAUAAAAGAAgAAAAAAAYAAAAGAAkAAAABAAMAAAAGAAgAAAABAAQAAAAGAAgAAAABAAUAAAAGAAgAAAABAAYAAAAHAAkAAAACAAMAAAAGAAgAAAACAAQAAAAGAAgAAAACAAUAAAAGAAgAAAACAAYAAAAGAAkAAAADAAMAAAAGAAgAAAADAAQAAAAGAAgAAAADAAUAAAAGAAgAAAADAAYAAAAHAAkAAAAEAAMAAAAIAAYAAAAEAAQAAAAIAAcAAAAEAAUAAAAIAAgAAAAEAAYAAAAIAAkAAAD7/wIAAAAFAAUAAAD8/wIAAAAHAAUAAAD9/wIAAAAGAAUAAAD+/wIAAAAHAAUAAAD//wIAAAAHAAUAAAAAAAIAAAAGAAUAAAABAAIAAAAHAAUAAAACAAIAAAAGAAUAAAADAAIAAAAGAAUAAAAEAAIAAAAIAAUAAAA=")
+tile_map_data = PackedByteArray("AAD8/wYAAAAFAAUAAAD8/wcAAAAFAAYAAAD8/wgAAAAFAAcAAAD8/wkAAAAFAAgAAAD8/woAAAAFAAkAAAD9/wYAAAAHAAUAAAD9/wcAAAAGAAgAAAD9/wgAAAAGAAgAAAD9/wkAAAAGAAgAAAD9/woAAAAGAAkAAAD+/wYAAAAGAAUAAAD+/wcAAAAGAAgAAAD+/wgAAAAGAAgAAAD+/wkAAAAGAAgAAAD+/woAAAAHAAkAAAD//wYAAAAHAAUAAAD//wcAAAAGAAgAAAD//wgAAAAGAAgAAAD//wkAAAAGAAgAAAD//woAAAAGAAkAAAAAAAYAAAAHAAUAAAAAAAcAAAAGAAgAAAAAAAgAAAAGAAgAAAAAAAkAAAAGAAgAAAAAAAoAAAAHAAkAAAABAAYAAAAGAAUAAAABAAcAAAAGAAgAAAABAAgAAAAGAAgAAAABAAkAAAAGAAgAAAABAAoAAAAGAAkAAAACAAYAAAAHAAUAAAACAAcAAAAGAAgAAAACAAgAAAAGAAgAAAACAAkAAAAGAAgAAAACAAoAAAAHAAkAAAADAAYAAAAGAAUAAAADAAcAAAAGAAgAAAADAAgAAAAGAAgAAAADAAkAAAAGAAgAAAADAAoAAAAGAAkAAAAEAAYAAAAGAAUAAAAEAAcAAAAGAAgAAAAEAAgAAAAGAAgAAAAEAAkAAAAGAAgAAAAEAAoAAAAHAAkAAAAFAAYAAAAIAAUAAAAFAAcAAAAIAAYAAAAFAAgAAAAIAAcAAAAFAAkAAAAIAAgAAAD8//7/AAAFAAUAAAD8////AAAFAAYAAAD8/wAAAAAFAAcAAAD9//7/AAAGAAUAAAD+//7/AAAHAAUAAAD+////AAAGAAgAAAD+/wAAAAAGAAgAAAD///7/AAAGAAUAAAD/////AAAGAAgAAAD//wAAAAAGAAgAAAAAAP7/AAAHAAUAAAAAAP//AAAGAAgAAAAAAAAAAAAGAAgAAAABAP7/AAAHAAUAAAABAP//AAAGAAgAAAABAAAAAAAGAAgAAAACAP7/AAAIAAUAAAACAP//AAAIAAYAAAACAAAAAAAIAAcAAAD9/wEAAAAHAAkAAAD+/wEAAAAGAAkAAAD//wEAAAAHAAkAAAAAAAEAAAAGAAkAAAABAAEAAAAHAAkAAAD8/wEAAAAFAAkAAAAFAAoAAAAIAAkAAAACAAEAAAAIAAkAAAAFAAEAAAAFAAUAAAAGAAEAAAAGAAUAAAAHAAEAAAAIAAUAAAAHAAIAAAAIAAYAAAAFAAIAAAAFAAYAAAAGAAIAAAAGAAYAAAAGAAMAAAAGAAcAAAAFAAMAAAAFAAcAAAAHAAMAAAAIAAcAAAAFAAQAAAAFAAkAAAAGAAQAAAAGAAkAAAAHAAQAAAAIAAkAAAD9////AAAHAAgAAAD9/wAAAAAHAAgAAAA=")
 tile_set = SubResource("TileSet_ptsi8")
 
 [node name="Camera" type="Camera2D" parent="."]
 texture_filter = 1
+position = Vector2(15, 48)
 offset = Vector2(0, -9.07)
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
 
-[node name="Flag" parent="." instance=ExtResource("4_6la3a")]
-position = Vector2(0, 40)
+[node name="Flag" parent="." instance=ExtResource("1_fajuv")]
+position = Vector2(0, 104)
 
-[node name="Player" parent="." instance=ExtResource("5_6la3a")]
-position = Vector2(0, -60)
+[node name="Player" parent="." instance=ExtResource("3_d7ba7")]
+position = Vector2(0, -46)

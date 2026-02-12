@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://c5h1ayg7tj7i8"]
+[gd_scene load_steps=8 format=4 uid="uid://bjmtnxqshg3sk"]
 
-[ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_5rlot"]
-[ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_8eu61"]
-[ext_resource type="PackedScene" uid="uid://bqbpt74ipns7v" path="res://lessons/lesson_06/player_lesson_06.tscn" id="3_nk5q7"]
-[ext_resource type="Texture2D" uid="uid://b46uk8x41lnod" path="res://shared/art/environment/terrain/ts_terrain_tiles_01.png" id="4_peo76"]
-[ext_resource type="PackedScene" uid="uid://cl2yw6owax5np" path="res://shared/scenes/flag.tscn" id="5_wr5w4"]
+[ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_axara"]
+[ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_wr5w4"]
+[ext_resource type="PackedScene" uid="uid://bkfjdonxa5kxv" path="res://lessons/lesson_06/player_lesson_06.tscn" id="3_37f8y"]
+[ext_resource type="Texture2D" uid="uid://b46uk8x41lnod" path="res://shared/art/environment/terrain/ts_terrain_tiles_01.png" id="4_n50x6"]
+[ext_resource type="PackedScene" uid="uid://cl2yw6owax5np" path="res://shared/scenes/flag.tscn" id="4_t4di0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gulr2"]
-texture = ExtResource("4_peo76")
+texture = ExtResource("4_n50x6")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.07518005, 8, -0.07518005, 8, 8, -8, 8)
 2:0/0 = 0
@@ -342,10 +342,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gulr2")
 
 [node name="Lesson06" type="Node2D"]
-script = ExtResource("1_5rlot")
-lesson_id = "lesson_06"
+script = ExtResource("1_axara")
+lesson_id = "lesson_07"
 
-[node name="Background" parent="." instance=ExtResource("2_8eu61")]
+[node name="Background" parent="." instance=ExtResource("2_wr5w4")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -360,7 +360,7 @@ zoom = Vector2(4.24, 4.24)
 process_callback = 0
 position_smoothing_enabled = true
 
-[node name="Flag" parent="." instance=ExtResource("5_wr5w4")]
-position = Vector2(247, 24)
+[node name="Flag" parent="." instance=ExtResource("4_t4di0")]
+position = Vector2(240, 24)
 
-[node name="Player" parent="." instance=ExtResource("3_nk5q7")]
+[node name="Player" parent="." instance=ExtResource("3_37f8y")]

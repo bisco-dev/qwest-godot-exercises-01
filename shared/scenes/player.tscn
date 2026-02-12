@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://c42uvkhabynn0"]
 
-[ext_resource type="Script" uid="uid://c17kxb5ip86i8" path="res://lessons/lesson_02/player_lesson_02.gd" id="1_kvwlh"]
+[ext_resource type="Script" uid="uid://c17kxb5ip86i8" path="res://lessons/lesson_01/player_lesson_01.gd" id="1_kvwlh"]
 [ext_resource type="Texture2D" uid="uid://cbti6j4pfdmyv" path="res://shared/art/characters/knight/ss_knight_01.png" id="2_u8px6"]
 
 [sub_resource type="Animation" id="Animation_ptsi8"]
