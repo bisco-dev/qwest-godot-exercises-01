@@ -10,9 +10,6 @@ func start_lesson(new_lesson_id: String) -> void:
 	lesson_id = new_lesson_id
 	end_ui.hide()
 	code = code_data.codes.get(lesson_id, "")
-	
-	if lesson_id == "lesson_01":
-		complete_lesson()
 
 func complete_lesson() -> void:
 	end_ui.code_label.text = str(code)

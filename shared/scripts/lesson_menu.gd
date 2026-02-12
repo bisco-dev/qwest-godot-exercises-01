@@ -7,7 +7,6 @@ extends Control
 @export var lesson_button_04: Button
 @export var lesson_button_05: Button
 @export var lesson_button_06: Button
-@export var lesson_button_07: Button
 
 const translations: Dictionary = {
 	"godot_exercises": {
@@ -15,30 +14,26 @@ const translations: Dictionary = {
 		"fr": "Exercices Godot 01"
 	},
 	"lesson_01": {
-		"en": "Workflow Setup",
-		"fr": "Configuration de l'environnement"
-	},
-	"lesson_02": {
 		"en": "Stand Your Ground",
 		"fr": "Gardez votre position"
 	},
-	"lesson_03": {
+	"lesson_02": {
 		"en": "First Steps",
 		"fr": "Premiers Pas"
 	},
-	"lesson_04": {
+	"lesson_03": {
 		"en": "Leap Of Faith",
 		"fr": "Saut de la foi"
 	},
-	"lesson_05": {
+	"lesson_04": {
 		"en": "Beyond The Horizon",
 		"fr": "Au-delà de l'horizon"
 	},
-	"lesson_06": {
+	"lesson_05": {
 		"en": "Defy Gravity",
 		"fr": "Défier la gravité"
 	},
-	"lesson_07": {
+	"lesson_06": {
 		"en": "The Tuning Ritual",
 		"fr": "Le rituel de réglage"
 	}
@@ -53,7 +48,6 @@ func _ready() -> void:
 	lesson_button_04.pressed.connect(_on_lesson_button_04_pressed)
 	lesson_button_05.pressed.connect(_on_lesson_button_05_pressed)
 	lesson_button_06.pressed.connect(_on_lesson_button_06_pressed)
-	lesson_button_07.pressed.connect(_on_lesson_button_07_pressed)
 
 func update_locale(new_locale: String) -> void:
 	locale = new_locale
@@ -64,7 +58,6 @@ func update_locale(new_locale: String) -> void:
 	lesson_button_04.text = translations["lesson_04"][locale]
 	lesson_button_05.text = translations["lesson_05"][locale]
 	lesson_button_06.text = translations["lesson_06"][locale]
-	lesson_button_07.text = translations["lesson_07"][locale]
 
 
 func _on_lesson_button_01_pressed() -> void:
@@ -89,10 +82,6 @@ func _on_lesson_button_05_pressed() -> void:
 
 func _on_lesson_button_06_pressed() -> void:
 	get_tree().change_scene_to_file("res://lessons/lesson_06/lesson_06.tscn")
-
-
-func _on_lesson_button_07_pressed() -> void:
-	get_tree().change_scene_to_file("res://lessons/lesson_07/lesson_07.tscn")
 
 
 func _on_locale_option_button_item_selected(index: int) -> void:
