@@ -10,9 +10,7 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_pressed("move_right"):
 		move_right()
 		
-	# Check for jump input
-	if Input.is_action_just_pressed("jump"):
-		jump()
+	# TODO: Check if "jump" is just pressed, if so call jump()
 	
 	# Apply the physics (gravity, movement, animations)
 	update_physics(delta)
