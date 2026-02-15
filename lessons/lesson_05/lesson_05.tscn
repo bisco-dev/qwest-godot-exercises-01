@@ -343,7 +343,7 @@ sources/0 = SubResource("TileSetAtlasSource_gulr2")
 
 [node name="Lesson05" type="Node2D"]
 script = ExtResource("1_5rlot")
-lesson_id = "lesson_06"
+lesson_id = "lesson_05"
 
 [node name="Background" parent="." instance=ExtResource("2_8eu61")]
 

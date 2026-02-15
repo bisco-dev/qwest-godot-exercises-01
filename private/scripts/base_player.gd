@@ -16,7 +16,7 @@ signal on_jump_apex_reached
 @export_group("Movement")
 @export var speed: float = 50.0
 @export var gravity: float = 50.0
-@export var jump_force: float = -90.0
+@export var jump_force: float = 300.0
 
 var input_velocity: Vector2
 var last_velocity: Vector2
@@ -49,7 +49,7 @@ func update_physics(delta: float) -> void:
 	input_velocity.x = _current_input_x
 	
 	if _jump_requested:
-		input_velocity.y = jump_force
+		input_velocity.y = -jump_force
 		on_jumped.emit()
 		_jump_requested = false
 		

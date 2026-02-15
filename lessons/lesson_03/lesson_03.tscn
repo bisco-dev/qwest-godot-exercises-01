@@ -343,7 +343,7 @@ sources/0 = SubResource("TileSetAtlasSource_gulr2")
 
 [node name="Lesson03" type="Node2D"]
 script = ExtResource("1_15uy3")
-lesson_id = "lesson_04"
+lesson_id = "lesson_03"
 
 [node name="Background" parent="." instance=ExtResource("2_rwvn7")]
 position = Vector2(89, -17)
