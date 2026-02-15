@@ -1,4 +1,4 @@
-class_name BasePlayerLesson05
+class_name BasePlayer
 extends CharacterBody2D
 
 # ===========WARNING=============
@@ -13,31 +13,31 @@ signal on_jump_apex_reached
 @export var sprite: Sprite2D
 @export var anim_tree: AnimationTree
 
-@export_group("Movement")
-@export var speed: float = 50.0
+@export_group("Base Player")
 @export var gravity: float = 50.0
-@export var jump_force: float = 300.0
 
 var input_velocity: Vector2
 var last_velocity: Vector2
 var was_on_floor: bool
+var base_jump_force: float
 
 # State variables for the current frame
 var _current_input_x: float = 0.0
 var _jump_requested: bool = false
 
-func move_left() -> void:
+func move_left(speed: float) -> void:
 	_current_input_x = -speed
 	if sprite:
 		sprite.flip_h = true
 
-func move_right() -> void:
+func move_right(speed: float) -> void:
 	_current_input_x = speed
 	if sprite:
 		sprite.flip_h = false
 
-func jump() -> void:
+func jump(jump_force: float) -> void:
 	if is_on_floor():
+		base_jump_force = jump_force
 		_jump_requested = true
 
 func update_physics(delta: float) -> void:
@@ -49,7 +49,7 @@ func update_physics(delta: float) -> void:
 	input_velocity.x = _current_input_x
 	
 	if _jump_requested:
-		input_velocity.y = -jump_force
+		input_velocity.y = -base_jump_force
 		on_jumped.emit()
 		_jump_requested = false
 		
