@@ -8,7 +8,7 @@ bg_color = Color(0.13333334, 0.13333334, 0.16862746, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_uqk5r"]
 font_size = 36
 
-[node name="LessonMenu" type="Control" node_paths=PackedStringArray("tg_label", "lesson_button_01", "lesson_button_02", "lesson_button_03", "lesson_button_04", "lesson_button_05", "lesson_button_06")]
+[node name="LessonMenu" type="Control" node_paths=PackedStringArray("tg_label", "lesson_button_01", "lesson_button_02", "lesson_button_03", "lesson_button_04", "lesson_button_05")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,6 @@ lesson_button_02 = NodePath("MainVBox/LessonVBox/LessonButton02")
 lesson_button_03 = NodePath("MainVBox/LessonVBox/LessonButton03")
 lesson_button_04 = NodePath("MainVBox/LessonVBox/LessonButton04")
 lesson_button_05 = NodePath("MainVBox/LessonVBox/LessonButton05")
-lesson_button_06 = NodePath("MainVBox/LessonVBox/LessonButton06")
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1
@@ -84,11 +83,8 @@ text = "Beyond The Horizon"
 
 [node name="LessonButton05" type="Button" parent="MainVBox/LessonVBox"]
 layout_mode = 2
-text = "Defy Gravity"
-
-[node name="LessonButton06" type="Button" parent="MainVBox/LessonVBox"]
-layout_mode = 2
-text = "The Tuning Ritual"
+text = "Tuning Ritual
+"
 
 [node name="LocaleOptionButton" type="OptionButton" parent="MainVBox"]
 layout_mode = 2

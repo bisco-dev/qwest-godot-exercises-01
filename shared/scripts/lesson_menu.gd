@@ -6,7 +6,6 @@ extends Control
 @export var lesson_button_03: Button
 @export var lesson_button_04: Button
 @export var lesson_button_05: Button
-@export var lesson_button_06: Button
 
 const translations: Dictionary = {
 	"godot_exercises": {
@@ -30,10 +29,6 @@ const translations: Dictionary = {
 		"fr": "Au-delà de l'horizon"
 	},
 	"lesson_05": {
-		"en": "Defy Gravity",
-		"fr": "Défier la gravité"
-	},
-	"lesson_06": {
 		"en": "The Tuning Ritual",
 		"fr": "Le rituel de réglage"
 	}
@@ -47,7 +42,6 @@ func _ready() -> void:
 	lesson_button_03.pressed.connect(_on_lesson_button_03_pressed)
 	lesson_button_04.pressed.connect(_on_lesson_button_04_pressed)
 	lesson_button_05.pressed.connect(_on_lesson_button_05_pressed)
-	lesson_button_06.pressed.connect(_on_lesson_button_06_pressed)
 
 func update_locale(new_locale: String) -> void:
 	locale = new_locale
@@ -57,7 +51,6 @@ func update_locale(new_locale: String) -> void:
 	lesson_button_03.text = translations["lesson_03"][locale]
 	lesson_button_04.text = translations["lesson_04"][locale]
 	lesson_button_05.text = translations["lesson_05"][locale]
-	lesson_button_06.text = translations["lesson_06"][locale]
 
 
 func _on_lesson_button_01_pressed() -> void:
@@ -78,10 +71,6 @@ func _on_lesson_button_04_pressed() -> void:
 
 func _on_lesson_button_05_pressed() -> void:
 	get_tree().change_scene_to_file("res://lessons/lesson_05/lesson_05.tscn")
-
-
-func _on_lesson_button_06_pressed() -> void:
-	get_tree().change_scene_to_file("res://lessons/lesson_06/lesson_06.tscn")
 
 
 func _on_locale_option_button_item_selected(index: int) -> void:
