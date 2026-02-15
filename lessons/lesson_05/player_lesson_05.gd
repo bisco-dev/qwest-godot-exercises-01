@@ -2,7 +2,7 @@
 extends "res://private/scripts/base_player_lesson_05.gd"
 
 # Variable to export and tweak
-const speed: float = 50.0
+const speed: float = 100.0
 const jump_force: float = 300.0
 
 func _physics_process(delta: float) -> void:
