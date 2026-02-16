@@ -1,5 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsp45hoq1s8lq"]
+[gd_scene load_steps=3 format=3 uid="uid://dsp45hoq1s8lq"]
 
 [ext_resource type="PackedScene" uid="uid://c42uvkhabynn0" path="res://shared/scenes/player.tscn" id="1_d6av6"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d6av6"]
+radius = 6.0
+height = 18.0
+
 [node name="Player" instance=ExtResource("1_d6av6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(0, -8.23)
+shape = SubResource("CapsuleShape2D_d6av6")

@@ -6,6 +6,6 @@ func _ready() -> void:
 		body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is BasePlayer:
+	if body is BasePlayer or body is BasePlayerLesson05:
 		if LessonManager:
 			LessonManager.complete_lesson()

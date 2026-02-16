@@ -1,5 +1,5 @@
 # Helper code to help you learn faster
-extends "res://private/scripts/base_player_lesson_05.gd"
+extends BasePlayerLesson05
 
 # Variable to export and tweak
 const speed: float = 100.0

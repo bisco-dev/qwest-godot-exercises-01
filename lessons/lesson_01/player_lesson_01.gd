@@ -1,5 +1,5 @@
 # Helper code to help you learn faster
-extends "res://private/scripts/base_player.gd"
+extends BasePlayer
 
 # This script controls the player character.
 # Most of the complex logic is hidden in the base script.

@@ -1,4 +1,4 @@
-class_name BasePlayerLesson05
+class_name BasePlayer
 extends CharacterBody2D
 
 # ===========WARNING=============
