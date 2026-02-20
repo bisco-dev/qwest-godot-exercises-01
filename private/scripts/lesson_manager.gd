@@ -6,6 +6,10 @@ var code_data = preload("uid://btyx4qqsrdi8a")
 var code: String
 var lesson_id: String
 
+func _ready() -> void:
+	print("Quest: Godot Platformer")
+	print("Enrollment Code: 676858")
+
 func start_lesson(new_lesson_id: String) -> void:
 	lesson_id = new_lesson_id
 	end_ui.hide()

@@ -9,28 +9,28 @@ extends Control
 
 const translations: Dictionary = {
 	"godot_exercises": {
-		"en": "Godot Exercises 01",
-		"fr": "Exercices Godot 01"
+		"en": "Godot Platformer",
+		"fr": "Platformer Godot"
 	},
 	"lesson_01": {
-		"en": "Stand Your Ground",
-		"fr": "Gardez votre position"
+		"en": "Lesson 1: Stand Your Ground",
+		"fr": "1. Gardez votre position"
 	},
 	"lesson_02": {
-		"en": "First Steps",
-		"fr": "Premiers Pas"
+		"en": "Lesson 2: First Steps",
+		"fr": "2. Premiers Pas"
 	},
 	"lesson_03": {
-		"en": "Leap Of Faith",
-		"fr": "Saut de la foi"
+		"en": "Lesson 3: Leap Of Faith",
+		"fr": "3. Saut de la foi"
 	},
 	"lesson_04": {
-		"en": "Beyond The Horizon",
-		"fr": "Au-delà de l'horizon"
+		"en": "Lesson 4: Beyond The Horizon",
+		"fr": "4. Au-delà de l'horizon"
 	},
 	"lesson_05": {
-		"en": "The Tuning Ritual",
-		"fr": "Le rituel de réglage"
+		"en": "Lesson 5: The Tuning Ritual",
+		"fr": "5. Le rituel de réglage"
 	}
 }
 
