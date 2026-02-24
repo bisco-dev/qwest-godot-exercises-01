@@ -13,9 +13,6 @@ signal on_jump_apex_reached
 @export var sprite: Sprite2D
 @export var anim_tree: AnimationTree
 
-@export_group("Base Player")
-@export var gravity: float = 50.0
-
 var input_velocity: Vector2
 var last_velocity: Vector2
 var was_on_floor: bool
@@ -40,10 +37,10 @@ func jump(jump_force: float) -> void:
 		base_jump_force = jump_force
 		_jump_requested = true
 
-func update_physics(delta: float) -> void:
+func update_physics(delta: float, gravity: float) -> void:
 	input_velocity = velocity
 	
-	_apply_gravity(delta)
+	_apply_gravity(delta, gravity)
 	
 	# Apply Movement
 	input_velocity.x = _current_input_x
@@ -68,7 +65,7 @@ func update_physics(delta: float) -> void:
 	_current_input_x = 0.0
 	# Jump request is reset immediately after application
 
-func _apply_gravity(delta: float) -> void:
+func _apply_gravity(delta: float, gravity: float) -> void:
 	if not is_on_floor():
 		if input_velocity.y < 0 and (input_velocity.y + gravity * delta) >= 0:
 			on_jump_apex_reached.emit()

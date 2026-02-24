@@ -2,8 +2,9 @@
 extends BasePlayerLesson05
 
 # Variable to export and tweak
-const speed: float = 100.0
-const jump_force: float = 300.0
+@export var speed: float = 120.0
+@export var jump_force: float = 300.0
+@export var gravity: float = 1500.0
 
 func _physics_process(delta: float) -> void:
 	# Check for movement input
@@ -17,4 +18,4 @@ func _physics_process(delta: float) -> void:
 		jump(jump_force)
 	
 	# Apply the physics (gravity, movement, animations)
-	update_physics(delta)
+	update_physics(delta, gravity)

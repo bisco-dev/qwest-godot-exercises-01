@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://0tjpkmio2utp"]
+[gd_scene load_steps=10 format=4 uid="uid://0tjpkmio2utp"]
 
 [ext_resource type="Script" uid="uid://dvhk1mj6ox1yv" path="res://shared/scripts/lesson.gd" id="1_peo76"]
 [ext_resource type="PackedScene" uid="uid://co0vpqxgiqehx" path="res://shared/scenes/background.tscn" id="2_o1sft"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4dmlwywylgro" path="res://shared/art/backgrounds/clouds/t_clouds_04.png" id="4_dv3x3"]
 [ext_resource type="Texture2D" uid="uid://b46uk8x41lnod" path="res://shared/art/environment/terrain/ts_terrain_tiles_01.png" id="5_7427e"]
 [ext_resource type="PackedScene" uid="uid://cl2yw6owax5np" path="res://shared/scenes/flag.tscn" id="6_f7l77"]
-[ext_resource type="PackedScene" uid="uid://dq78i2v6hploj" path="res://lessons/lesson_04/player_lesson_04.tscn" id="7_qs3se"]
-[ext_resource type="Script" uid="uid://csdspnjfnmqsa" path="res://lessons/lesson_05/player_lesson_05.gd" id="8_vbkqi"]
+[ext_resource type="PackedScene" uid="uid://bqbpt74ipns7v" path="res://lessons/lesson_05/player_lesson_05.tscn" id="7_vq20t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gulr2"]
 texture = ExtResource("5_7427e")
@@ -381,8 +380,8 @@ tile_set = SubResource("TileSet_ptsi8")
 [node name="Flag" parent="." instance=ExtResource("6_f7l77")]
 position = Vector2(457, -247)
 
-[node name="Player" parent="." instance=ExtResource("7_qs3se")]
-script = ExtResource("8_vbkqi")
+[node name="Player" parent="." instance=ExtResource("7_vq20t")]
+speed = 120.0
 
 [node name="Camera" type="Camera2D" parent="Player"]
 texture_filter = 1
